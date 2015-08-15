@@ -19,11 +19,11 @@ void base64_encode(unsigned char *input, unsigned input_length, unsigned char *o
 	unsigned input_cnt = 0;
 	unsigned output_cnt = 0;
 
-	while (input_cnt< input_length)
+	while (input_cnt < input_length)
 	{
 		buff1[i] = input[input_cnt];
 		++i;
-		input_cnt++;
+		++input_cnt;
 		if (i != 3) continue;
 		output[output_cnt] = encodeCharacterTable[(buff1[0] & 0xfc) >> 2];
 		++output_cnt;
